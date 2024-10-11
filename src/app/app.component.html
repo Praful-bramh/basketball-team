@@ -1,0 +1,14 @@
+@for(team of team$ | async; track team.id){
+  <button (click)="getTeamDetails(team)">{{team.name}}</button>
+ <!-- {{team.id |json}} -->
+}
+
+@for(team of team$ | async; track team.id){
+<app-teams [teams]="team" [stats]="stats[team.id]" *ngIf = "selectTeam === team.id"></app-teams>
+}
+
+@if(selectTeam === -1){
+  <div>
+  No Result
+</div>
+}

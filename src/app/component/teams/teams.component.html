@@ -1,0 +1,16 @@
+<p>teams works!</p>
+<div>
+   <div data-name ="name">{{getAssociationDescription(teams)}}</div>
+   <div data-name ="full">{{getNamewithCode(stats)}}</div>
+   <div data-name ="count">{{stats?.avaragepointconceded}}</div>
+   <div data-name ="Scored">{{stats?.avaragepointscored}}</div>
+   <div data-name ="lastwin" *ngFor="let win of stats?.lastWins">
+      <p class ="type" [ngClass]="{'W' : win ==='W','L': win ==='L'}">{{win}}</p>
+   </div>
+
+   @if(imageSource){
+      <img [src]="imageSource"/>
+   }
+
+</div>
+
