@@ -11,6 +11,7 @@ export class TeamsService {
 
   getTeamStats(team:Team) :Observable<Stats[]>{
 
+    //This is sample Data List
     const stats: Stats[] = [
       { 
         name:'Bangalore',
@@ -48,13 +49,10 @@ export class TeamsService {
       }
     ]
     return of(stats);
-  }
-  // {name:'Mumbai',abbrevation:'MEM',avaragepointconceded:56,avaragepointscored:8},
-  //     {name:'Odisha',abbrevation:'ORL',avaragepointconceded:45,avaragepointscored:23},
-  //     {name:'Noida',abbrevation:'NOD',avaragepointconceded:23,avaragepointscored:14},
-     
+  }    
 
   getTeams(){
+    //This is sample Data List
     const team: Team[] =  [
         {id:0 ,name:'Bangalore',fullname:'Nation1',code:'BLR'},
         {id:1 ,name:'Mumbai',fullname:'Nation2',code:'MEM'},
@@ -64,8 +62,6 @@ export class TeamsService {
       ]
       return of(team)
     }
-  
-
 
   }
 
